@@ -12,7 +12,7 @@ public class V1_1_0__Insert_Data implements JdbcMigration {
         Statement statement = connection.createStatement();
 
         try {
-            statement.execute("Insert into person (first_name, last_name) Values (Alice, Bob)");
+            statement.execute("Insert into person (first_name, last_name) Values ('Alice', 'Bob')");
         } finally {
             statement.close();
         }

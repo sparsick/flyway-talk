@@ -10,10 +10,12 @@
 		<flyway.version>2.2.1</flyway.version>
 		<spring.framework.version>3.2.4.RELEASE</spring.framework.version>
 		<java.version>1.7</java.version>
+		<mysql.version>5.1.26</mysql.version>
 	</properties>
 
 	<modules>
 		<module>database-scripts</module>
+		<module>flyway-api-demo</module>
 	</modules>
 
 	<dependencyManagement>
@@ -28,6 +30,11 @@
 				<artifactId>spring-jdbc</artifactId>
 				<version>${spring.framework.version}</version>
 			</dependency>
+			<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
 		</dependencies>
 	</dependencyManagement>
 

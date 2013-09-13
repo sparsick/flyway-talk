@@ -7,7 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>database-scripts</artifactId>
+	<artifactId>flyway-api-demo</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -15,30 +15,17 @@
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
+			<groupId>com.github.skosmalla.flyway.demo</groupId>
+			<artifactId>database-scripts</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>provided</scope>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>com.googlecode.flyway</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<version>${flyway.version}</version>
-				<configuration>
-					<user>demo</user>
-					<password>demo</password>
-					<url>jdbc:mysql://192.168.56.101:3306/flyway_demo</url>
-				</configuration>
-			</plugin>
-
-		</plugins>
-	</build>
-
+	<!-- mvn exec:java -Dexec.mainClass=com.github.skosmalla.flyway.demo.FlywayApiDemo
+		-Dexec.args="jdbc:mysql://192.168.56.101:3306/flyway_demo demo demo" -->
 </project>
