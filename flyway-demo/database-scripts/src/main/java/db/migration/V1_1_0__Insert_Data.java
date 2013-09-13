@@ -7,6 +7,7 @@ import com.googlecode.flyway.core.api.migration.jdbc.JdbcMigration;
 
 public class V1_1_0__Insert_Data implements JdbcMigration {
 
+    @Override
     public void migrate(Connection connection) throws Exception {
         Statement statement = connection.createStatement();
 

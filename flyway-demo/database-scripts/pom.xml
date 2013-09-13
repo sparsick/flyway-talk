@@ -8,6 +8,8 @@
 	</parent>
 
 	<artifactId>database-scripts</artifactId>
+	
+	
 
 	<dependencies>
 		<dependency>
