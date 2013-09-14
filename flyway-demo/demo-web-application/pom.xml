@@ -9,28 +9,16 @@
 	<artifactId>demo-web-application</artifactId>
 	<packaging>war</packaging>
 
-	<properties>
-		<wicket.version>6.10.0</wicket.version>
-		<jetty.version>7.6.3.v20120416</jetty.version>
-	</properties>
-
 	<dependencies>
-		<!-- WICKET DEPENDENCIES -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-core</artifactId>
-			<version>${wicket.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
 			<artifactId>wicket-spring</artifactId>
-			<version>${wicket.version}</version>
 		</dependency>
-		<!-- OPTIONAL DEPENDENCY <dependency> <groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-extensions</artifactId> <version>${wicket.version}</version>
-			</dependency> -->
 
-		<!-- LOGGING DEPENDENCIES - LOG4J -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -64,14 +52,11 @@
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
 		</dependency>
 
-		<!-- JUNIT DEPENDENCY FOR TESTING -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -79,7 +64,6 @@
 		<dependency>
 			<groupId>org.eclipse.jetty.aggregate</groupId>
 			<artifactId>jetty-all-server</artifactId>
-			<version>${jetty.version}</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
