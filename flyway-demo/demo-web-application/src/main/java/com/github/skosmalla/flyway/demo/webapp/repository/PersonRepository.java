@@ -7,7 +7,6 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.stereotype.Repository;
-
 import com.github.skosmalla.flyway.demo.webapp.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -21,9 +20,9 @@ public class PersonRepository {
 
     @Autowired(required = true)
     public PersonRepository(DataSource dataSource) {
+        checkJdbcDriver();
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
-
 
     public PersonRepository() {
 
@@ -49,5 +48,13 @@ public class PersonRepository {
     public void save(Person person) {
         jdbcTemplate.update("Insert into person (first_name,last_name) values(?,?)", person.getFirstName(),
                 person.getLastName());
+    }
+
+    private void checkJdbcDriver() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException ex) {
+            throw new RuntimeException("Cannot load JDBC driver", ex);
+        }
     }
 }
