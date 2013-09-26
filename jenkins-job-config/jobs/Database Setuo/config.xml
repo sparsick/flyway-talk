@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver plugin="repository-connector@0.8.2">
+      <targetDirectory>./jars</targetDirectory>
+      <artifacts>
+        <org.jvnet.hudson.plugins.repositoryconnector.Artifact>
+          <groupId>com.github.skosmalla.flyway.demo</groupId>
+          <artifactId>database-scripts</artifactId>
+          <classifier></classifier>
+          <version>0.0.1-SNAPSHOT</version>
+          <extension>jar</extension>
+          <targetFileName></targetFileName>
+        </org.jvnet.hudson.plugins.repositoryconnector.Artifact>
+      </artifacts>
+      <failOnError>true</failOnError>
+      <enableRepoLogging>false</enableRepoLogging>
+      <snapshotUpdatePolicy>always</snapshotUpdatePolicy>
+      <releaseUpdatePolicy>never</releaseUpdatePolicy>
+      <snapshotChecksumPolicy>warn</snapshotChecksumPolicy>
+      <releaseChecksumPolicy>warn</releaseChecksumPolicy>
+    </org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver>
+    <hudson.tasks.BatchFile>
+      <command>flyway.cmd clean</command>
+    </hudson.tasks.BatchFile>
+    <hudson.tasks.BatchFile>
+      <command>flyway.cmd migrate
+</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>Server Setup</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>

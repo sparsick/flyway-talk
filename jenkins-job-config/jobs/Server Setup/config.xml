@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver plugin="repository-connector@0.8.2">
+      <targetDirectory>.</targetDirectory>
+      <artifacts>
+        <org.jvnet.hudson.plugins.repositoryconnector.Artifact>
+          <groupId>com.github.skosmalla.flyway.demo</groupId>
+          <artifactId>demo-web-application</artifactId>
+          <classifier></classifier>
+          <version>0.0.1-SNAPSHOT</version>
+          <extension>war</extension>
+          <targetFileName>demo.war</targetFileName>
+        </org.jvnet.hudson.plugins.repositoryconnector.Artifact>
+      </artifacts>
+      <failOnError>true</failOnError>
+      <enableRepoLogging>false</enableRepoLogging>
+      <snapshotUpdatePolicy>always</snapshotUpdatePolicy>
+      <releaseUpdatePolicy>never</releaseUpdatePolicy>
+      <snapshotChecksumPolicy>warn</snapshotChecksumPolicy>
+      <releaseChecksumPolicy>warn</releaseChecksumPolicy>
+    </org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver>
+    <hudson.tasks.BatchFile>
+      <command>xcopy /Y demo.war C:\dev\apache-tomcat-7.0.42\webapps</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
