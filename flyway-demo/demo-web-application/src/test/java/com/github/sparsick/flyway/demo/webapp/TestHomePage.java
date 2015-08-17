@@ -1,10 +1,12 @@
-package com.github.skosmalla.flyway.demo.webapp;
+package com.github.sparsick.flyway.demo.webapp;
 
+import com.github.sparsick.flyway.demo.webapp.HomePage;
+import com.github.sparsick.flyway.demo.webapp.WicketApplication;
 import java.util.Collections;
 import java.util.List;
 
-import com.github.skosmalla.flyway.demo.webapp.domain.Person;
-import com.github.skosmalla.flyway.demo.webapp.repository.PersonRepository;
+import com.github.sparsick.flyway.demo.webapp.domain.Person;
+import com.github.sparsick.flyway.demo.webapp.repository.PersonRepository;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 import org.apache.wicket.spring.test.ApplicationContextMock;
 import org.apache.wicket.util.tester.WicketTester;

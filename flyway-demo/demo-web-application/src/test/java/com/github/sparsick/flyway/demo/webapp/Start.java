@@ -1,4 +1,4 @@
-package com.github.skosmalla.flyway.demo.webapp;
+package com.github.sparsick.flyway.demo.webapp;
 
 import org.apache.wicket.util.time.Duration;
 import org.eclipse.jetty.server.Server;

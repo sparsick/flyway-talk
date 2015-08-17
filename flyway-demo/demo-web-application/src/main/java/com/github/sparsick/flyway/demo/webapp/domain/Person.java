@@ -1,4 +1,4 @@
-package com.github.skosmalla.flyway.demo.webapp.domain;
+package com.github.sparsick.flyway.demo.webapp.domain;
 
 import java.io.Serializable;
 

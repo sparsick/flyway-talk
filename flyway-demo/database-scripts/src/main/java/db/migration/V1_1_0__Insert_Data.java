@@ -2,8 +2,8 @@ package db.migration;
 
 import java.sql.Connection;
 import java.sql.Statement;
+import org.flywaydb.core.api.migration.jdbc.JdbcMigration;
 
-import com.googlecode.flyway.core.api.migration.jdbc.JdbcMigration;
 
 public class V1_1_0__Insert_Data implements JdbcMigration {
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-flyway:migrate</actionName>
+            <displayName>flyway:migrate</displayName>
+            <goals>
+                <goal>flyway:migrate</goal>
+            </goals>
+        </action>
+    </actions>

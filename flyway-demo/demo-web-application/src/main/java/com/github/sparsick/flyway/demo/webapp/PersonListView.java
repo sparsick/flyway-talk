@@ -1,8 +1,8 @@
-package com.github.skosmalla.flyway.demo.webapp;
+package com.github.sparsick.flyway.demo.webapp;
 
 import java.util.List;
 
-import com.github.skosmalla.flyway.demo.webapp.domain.Person;
+import com.github.sparsick.flyway.demo.webapp.domain.Person;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;

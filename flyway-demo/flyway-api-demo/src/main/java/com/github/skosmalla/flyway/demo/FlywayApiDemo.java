@@ -1,6 +1,7 @@
-package com.github.skosmalla.flyway.demo;
+package com.github.sparsick.flyway.demo;
 
-import com.googlecode.flyway.core.Flyway;
+import org.flywaydb.core.Flyway;
+
 
 
 public class FlywayApiDemo {

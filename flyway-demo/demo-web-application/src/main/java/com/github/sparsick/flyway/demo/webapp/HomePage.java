@@ -1,7 +1,7 @@
-package com.github.skosmalla.flyway.demo.webapp;
+package com.github.sparsick.flyway.demo.webapp;
 
-import com.github.skosmalla.flyway.demo.webapp.domain.Person;
-import com.github.skosmalla.flyway.demo.webapp.repository.PersonRepository;
+import com.github.sparsick.flyway.demo.webapp.domain.Person;
+import com.github.sparsick.flyway.demo.webapp.repository.PersonRepository;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
