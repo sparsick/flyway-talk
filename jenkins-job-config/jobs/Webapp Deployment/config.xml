@@ -3,23 +3,29 @@
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <jdk>(Default)</jdk>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver plugin="repository-connector@0.8.2">
+    <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver plugin="repository-connector@1.1.1">
       <targetDirectory>.</targetDirectory>
       <artifacts>
         <org.jvnet.hudson.plugins.repositoryconnector.Artifact>
-          <groupId>com.github.skosmalla.flyway.demo</groupId>
+          <groupId>com.github.sparsick.flyway.demo</groupId>
           <artifactId>demo-web-application</artifactId>
           <classifier></classifier>
-          <version>0.0.1-SNAPSHOT</version>
+          <version>0.0.2-SNAPSHOT</version>
           <extension>war</extension>
           <targetFileName>demo.war</targetFileName>
         </org.jvnet.hudson.plugins.repositoryconnector.Artifact>
@@ -31,9 +37,10 @@
       <snapshotChecksumPolicy>warn</snapshotChecksumPolicy>
       <releaseChecksumPolicy>warn</releaseChecksumPolicy>
     </org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver>
-    <hudson.tasks.BatchFile>
-      <command>xcopy /Y demo.war C:\dev\apache-tomcat-7.0.42\webapps</command>
-    </hudson.tasks.BatchFile>
+    <hudson.tasks.Shell>
+      <command>cp demo.war /home/sparsick/dev/apache-tomcat-7.0.59/webapps
+</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers/>

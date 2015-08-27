@@ -1,0 +1,30 @@
+- name: set debconf
+  sudo: true
+  debconf: name=mysql-server question='mysql-server/root_password' value=root vtype='password'
+- debconf: name=mysql-server question='mysql-server/root_password_again' value=root vtype='password'
+  sudo: true
+
+- name: installs mysql
+  sudo: true
+  apt: name=mysql-server state=present
+  
+- name: installs MySQL-python
+  sudo: true
+  apt: name=python-mysqldb state=present
+  
+- name: start mysql
+  sudo: true
+  service: name=mysql state=started
+
+- name: set bind address
+  sudo: true
+  lineinfile: dest=/etc/mysql/my.cnf
+    line='bind-address = 0.0.0.0'
+    state=present
+    regexp="^bind-address"
+  notify: restart mysql
+  
+- name: creates db user flyway
+  mysql_user: name=flyway password=flyway priv=*.*:ALL,GRANT state=present host=%  login_user=root login_password=root
+  
+ 

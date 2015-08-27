@@ -24,6 +24,7 @@ public class NewPersonForm extends Form<Person> {
         super(id, model);
         add(new TextField<String>("firstName"));
         add(new TextField<String>("lastName"));
+         add(new TextField<String>("jobTitle"));
         add(new Button("submitButton"));
 
     }

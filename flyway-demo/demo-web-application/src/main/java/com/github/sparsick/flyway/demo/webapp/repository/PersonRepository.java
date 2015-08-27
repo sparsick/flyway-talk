@@ -37,6 +37,7 @@ public class PersonRepository {
                 Person person = new Person();
                 person.setFirstName(resultSet.getString("first_name"));
                 person.setLastName(resultSet.getString("last_name"));
+                person.setJobTitle(resultSet.getString("job_title"));
                 return person;
             }
 
@@ -46,8 +47,12 @@ public class PersonRepository {
 
 
     public void save(Person person) {
-        jdbcTemplate.update("Insert into person (first_name,last_name) values(?,?)", person.getFirstName(),
-                person.getLastName());
+//        jdbcTemplate.update("Insert into person (first_name,last_name) values(?,?)", person.getFirstName(),
+//                person.getLastName());
+        
+        
+        jdbcTemplate.update("Insert into person (first_name,last_name,job_title) values(?,?,?)", person.getFirstName(),
+                person.getLastName(), person.getJobTitle());
     }
 
     private void checkJdbcDriver() {

@@ -23,5 +23,6 @@ final class PersonListView extends ListView<Person> {
       Person person = item.getModelObject();
       item.add(new Label("firstname", person.getFirstName()));
       item.add(new Label("lastname", person.getLastName()));
+      item.add(new Label("jobtitle", person.getJobTitle()));
     }
 }

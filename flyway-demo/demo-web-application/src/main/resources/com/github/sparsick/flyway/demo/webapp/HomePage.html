@@ -21,10 +21,12 @@
 			<tr>
 				<th>First Name</th>
 				<th>Last Name</th>
+                                <th>Job Title</th>
 			</tr>
 			<tr wicket:id="personList">
 				<td><span wicket:id="firstname">First name</span></td>
 				<td><span wicket:id="lastname">Last name</span></td>
+                                <td><span wicket:id="jobtitle">Job title</span></td>
 			</tr>
 		</table>
 
@@ -32,6 +34,7 @@
 		<form wicket:id="newPersonForm">
 			First Name: <input type="text" wicket:id="firstName" value="First name" size="50" /><br>
 			Last Name: <input type="text" wicket:id="lastName" value="Last name" size="50"/><br>
+                        Job Title: <input type="text" wicket:id="jobTitle" value="Job title" size="50"/><br>
 			<input wicket:id="submitButton" type="submit" value="Add new person" />
 		</form>
 	</div>

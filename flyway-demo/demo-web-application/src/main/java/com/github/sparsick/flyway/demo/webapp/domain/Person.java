@@ -12,8 +12,10 @@ public class Person implements Serializable{
     private String firstName;
 
     private String lastName;
+    
+    private String jobTitle;
 
-    public Person(){
+      public Person(){
 
     }
 
@@ -40,6 +42,14 @@ public class Person implements Serializable{
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    
+      public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
 
