@@ -49,7 +49,7 @@
   <prebuilders/>
   <postbuilders>
     <hudson.tasks.Maven>
-      <targets>flyway:clean flyway:migrate</targets>
+      <targets>flyway:clean flyway:migrate flyway:clean</targets>
       <mavenName>(Default)</mavenName>
       <pom>./database-scripts/pom.xml</pom>
       <usePrivateRepository>true</usePrivateRepository>
