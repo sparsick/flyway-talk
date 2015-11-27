@@ -1,7 +1,7 @@
-flyway-talk-herbstcampus-15
+flyway-talk-xpdays-germany-15
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Auch SQL ist Source Code - Continuous Database Integration mit Flyway" @ Herbstcampus Nürnberg (2015-09-03).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ XP Days Germany Karlsruhe (2015-11-26).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
