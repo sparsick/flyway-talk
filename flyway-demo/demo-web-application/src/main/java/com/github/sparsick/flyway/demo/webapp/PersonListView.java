@@ -13,7 +13,7 @@ final class PersonListView extends ListView<Person> {
     private static final long serialVersionUID = 9172837350405031400L;
 
 
-    PersonListView(String id, List<? extends Person> list) {
+    PersonListView(String id, List<Person> list) {
         super(id, list);
     }
 
