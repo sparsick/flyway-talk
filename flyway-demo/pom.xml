@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.sparsick.flyway.demo</groupId>
     <artifactId>flyway-demo</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
-        <flyway.version>3.2.1</flyway.version>
+        <flyway.version>4.0.3</flyway.version>
         <spring.framework.version>4.2.0.RELEASE</spring.framework.version>
         <java.version>1.7</java.version>
         <mysql.version>5.1.36</mysql.version>
