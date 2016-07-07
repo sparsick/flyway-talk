@@ -1,23 +1,23 @@
 - name: set debconf
-  sudo: true
+  become: true
   debconf: name=mysql-server question='mysql-server/root_password' value=root vtype='password'
 - debconf: name=mysql-server question='mysql-server/root_password_again' value=root vtype='password'
-  sudo: true
+  become: true
 
 - name: installs mysql
-  sudo: true
+  become: true
   apt: name=mysql-server state=present
   
 - name: installs MySQL-python
-  sudo: true
+  become: true
   apt: name=python-mysqldb state=present
   
 - name: start mysql
-  sudo: true
+  become: true
   service: name=mysql state=started
 
 - name: set bind address
-  sudo: true
+  become: true
   lineinfile: dest=/etc/mysql/my.cnf
     line='bind-address = 0.0.0.0'
     state=present

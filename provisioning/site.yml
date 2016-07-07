@@ -5,6 +5,6 @@
   
   tasks:
     - name: install unzip
-      sudo: true
+      become: true
       apt: name=unzip state=present
       
