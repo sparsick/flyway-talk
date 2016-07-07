@@ -1,30 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@2.11">
+<maven2-moduleset plugin="maven-plugin@2.13">
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
-  </properties>
+  <properties/>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <jdk>(Default)</jdk>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <rootModule>
     <groupId>com.github.sparsick.flyway.demo</groupId>
     <artifactId>flyway-demo</artifactId>
   </rootModule>
-  <goals>install</goals>
+  <goals>deploy</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <ignoreUnsuccessfulUpstreams>false</ignoreUnsuccessfulUpstreams>
   <archivingDisabled>false</archivingDisabled>
   <siteArchivingDisabled>false</siteArchivingDisabled>
   <fingerprintingDisabled>false</fingerprintingDisabled>
@@ -37,14 +32,7 @@
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
-  <publishers>
-    <hudson.maven.RedeployPublisher>
-      <id>snapshot</id>
-      <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
-      <uniqueVersion>true</uniqueVersion>
-      <evenIfUnstable>false</evenIfUnstable>
-    </hudson.maven.RedeployPublisher>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
   <prebuilders/>
   <postbuilders>
@@ -52,9 +40,10 @@
       <targets>flyway:clean flyway:migrate flyway:clean</targets>
       <mavenName>(Default)</mavenName>
       <pom>./database-scripts/pom.xml</pom>
-      <usePrivateRepository>true</usePrivateRepository>
+      <usePrivateRepository>false</usePrivateRepository>
       <settings class="jenkins.mvn.DefaultSettingsProvider"/>
       <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+      <injectBuildVariables>true</injectBuildVariables>
     </hudson.tasks.Maven>
   </postbuilders>
   <runPostStepsIfResult>
