@@ -15,10 +15,12 @@
 # limitations under the License.
 #
 
-# Save current directory
+# Detect cygwin
 cygwin=false
+linux=false
 case "`uname`" in
-  CYGWIN*) cygwin=true;;
+  CYGWIN*|MINGW*) cygwin=true;;
+  Linux*) linux=true;;
 esac
 
 # resolve links - $0 may be a softlink
@@ -34,7 +36,7 @@ while [ -h "$PRG" ] ; do
   fi
 done
 
-# Set the current directory to the installation directory
+# Detect the installation directory
 INSTALLDIR=`dirname "$PRG"`
 
 if [ -x "$INSTALLDIR/jre/bin/java" ]; then
@@ -48,13 +50,18 @@ else
  fi
 fi
 
+JAVA_ARGS=
 CP="$INSTALLDIR/lib/*:$INSTALLDIR/drivers/*"
+
+if $linux; then
+  JAVA_ARGS=-Djava.security.egd=file:/dev/../dev/urandom
+fi
 
 if $cygwin; then
   CP=$(cygpath -pw "$CP")
 fi
 
-"$JAVA_CMD" -cp "$CP" org.flywaydb.commandline.Main "$@"
+"$JAVA_CMD" $JAVA_ARGS -cp "$CP" org.flywaydb.commandline.Main "$@"
 
 # Exit using the same code returned from Java
 exit $?

@@ -5,17 +5,17 @@ Database Migrations Made Easy.
 
 Documentation
 -------------
-You can find getting started guides and reference documentation at http://flywaydb.org
+You can find getting started guides and reference documentation at https://flywaydb.org
 
 
 Contributing
 ------------
-Here is the info on how you can contribute in various ways to the project: http://flywaydb.org/contribute/
+Here is the info on how you can contribute in various ways to the project: https://flywaydb.org/documentation/contribute/
 
 
 License
 -------
-Copyright (C) 2010-2014 Axel Fontaine
+Copyright (C) 2010-2015 Axel Fontaine
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
