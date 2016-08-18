@@ -32,7 +32,7 @@
       <releaseChecksumPolicy>warn</releaseChecksumPolicy>
     </org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver>
     <hudson.tasks.Shell>
-      <command>cp demo.war /home/sparsick/dev/apache-tomcat-7.0.59/webapps
+      <command>cp demo.war /home/sparsick/dev/apache-tomcat-8.5.4/webapps
 </command>
     </hudson.tasks.Shell>
   </builders>
