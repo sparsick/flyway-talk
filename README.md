@@ -1,20 +1,20 @@
-flyway-talk-xpdays-germany-15
+flyway-talk-froscon-16
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ XP Days Germany Karlsruhe (2015-11-26).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ FrOSCon Sankt Augustin (2016-08-20).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
 - Jenkins  as CI server
 - Installed Jenkins Plugins: Repository Connector Plugin and Build Pipeline Plugin
-- Flyway in version 3.2.1
+- Flyway in version 4.0.3
 - Maven as Build Tool
 - MySQL
 
-flyway-3.2.1
+flyway-4.0.3
 ----------------------------
 
-The subfolder _flyway-3.2.1_ contains a pre-configured Flyway commandline tool. If you want to use it against your own MySQL database, you have to change the url, user and password configuration in 'flyway-3.2.1/conf/flyway.properties'.
+The subfolder _flyway-4.0.3_ contains a pre-configured Flyway commandline tool. If you want to use it against your own MySQL database, you have to change the url, user and password configuration in 'flyway-4.0.3/conf/flyway.properties'.
 
 
 flyway-demo
