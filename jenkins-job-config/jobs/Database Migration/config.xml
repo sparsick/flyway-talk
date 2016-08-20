@@ -12,6 +12,25 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
+    <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver plugin="repository-connector@1.1.3">
+      <targetDirectory>flyway-4.0.3/jars</targetDirectory>
+      <artifacts>
+        <org.jvnet.hudson.plugins.repositoryconnector.Artifact>
+          <groupId>com.github.sparsick.flyway.demo</groupId>
+          <artifactId>database-scripts</artifactId>
+          <classifier></classifier>
+          <version>0.0.3-SNAPSHOT</version>
+          <extension>jar</extension>
+          <targetFileName></targetFileName>
+        </org.jvnet.hudson.plugins.repositoryconnector.Artifact>
+      </artifacts>
+      <failOnError>false</failOnError>
+      <enableRepoLogging>false</enableRepoLogging>
+      <snapshotUpdatePolicy>never</snapshotUpdatePolicy>
+      <releaseUpdatePolicy>never</releaseUpdatePolicy>
+      <snapshotChecksumPolicy>warn</snapshotChecksumPolicy>
+      <releaseChecksumPolicy>warn</releaseChecksumPolicy>
+    </org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver>
     <hudson.tasks.Shell>
       <command>cd flyway-4.0.3
 ./flyway migrate</command>
