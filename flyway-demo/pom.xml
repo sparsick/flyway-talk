@@ -101,13 +101,13 @@
             <id>snapshot</id>
             <layout>default</layout>
             <name>Local Nexus Snapshot Repository</name>
-            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://localhost:8081/repository/snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>release</id>
             <layout>default</layout>
             <name>Local Nexus Release Repository</name>
-            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+            <url>http://localhost:8081/repository/releases/</url>
         </repository>
     </distributionManagement>
 </project>
