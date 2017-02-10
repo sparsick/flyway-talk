@@ -1,12 +1,12 @@
-flyway-talk-froscon-16
+flyway-talk-commiterconf-16
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ FrOSCon Sankt Augustin (2016-08-20).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ CommitterConf in Essen Sankt Augustin (2016-10-17).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
 - Jenkins  as CI server
-- Installed Jenkins Plugins: Repository Connector Plugin and Build Pipeline Plugin
+- Installed Jenkins Plugins: Repository Connector Plugin
 - Flyway in version 4.0.3
 - Maven as Build Tool
 - MySQL
