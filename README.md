@@ -1,7 +1,7 @@
-flyway-talk-commiterconf-16
+flyway-talk-devops-meetup-dus-17
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ CommitterConf in Essen Sankt Augustin (2016-10-17).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration with Flyway" @ DevOps Meetupp in Düsseldorf (2017-07-12).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
