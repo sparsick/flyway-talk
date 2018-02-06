@@ -12,8 +12,8 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty32"
-  
+  config.vm.box = "ubuntu/xenial64"
+
   # set an unique machine name
   config.vm.define :flywaydemo do |t|
   end
@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
   # config.vm.box_check_update = false
-  
+
   config.vm.hostname = "flyway-demo"
 
   # Create a forwarded port mapping which allows access to a specific port
@@ -71,5 +71,8 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision :shell, :path => "provisioning/init.sh", privileged: false
+  config.vm.provision "shell", inline: "sudo apt-get install python -y"
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "provisioning/site.yml"
+  end
 end

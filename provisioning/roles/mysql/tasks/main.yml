@@ -7,24 +7,22 @@
 - name: installs mysql
   become: true
   apt: name=mysql-server state=present
-  
+
 - name: installs MySQL-python
   become: true
   apt: name=python-mysqldb state=present
-  
+
 - name: start mysql
   become: true
   service: name=mysql state=started
 
 - name: set bind address
   become: true
-  lineinfile: dest=/etc/mysql/my.cnf
+  lineinfile: dest=/etc/mysql/mysql.conf.d/mysqld.cnf
     line='bind-address = 0.0.0.0'
     state=present
     regexp="^bind-address"
   notify: restart mysql
-  
+
 - name: creates db user flyway
   mysql_user: name=flyway password=flyway priv=*.*:ALL,GRANT state=present host=%  login_user=root login_password=root
-  
- 

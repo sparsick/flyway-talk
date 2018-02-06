@@ -1,10 +1,8 @@
-- hosts: localhost
-  connection: local
+- hosts: all
   roles:
   - mysql
-  
+
   tasks:
     - name: install unzip
       become: true
       apt: name=unzip state=present
-      
