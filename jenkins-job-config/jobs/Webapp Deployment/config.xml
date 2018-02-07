@@ -1,9 +1,14 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.27">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -12,14 +17,14 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver plugin="repository-connector@1.1.3">
+    <org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver plugin="repository-connector@1.2.3">
       <targetDirectory></targetDirectory>
       <artifacts>
         <org.jvnet.hudson.plugins.repositoryconnector.Artifact>
           <groupId>com.github.sparsick.flyway.demo</groupId>
           <artifactId>demo-web-application</artifactId>
           <classifier></classifier>
-          <version>0.0.3-SNAPSHOT</version>
+          <version>0.0.4-SNAPSHOT</version>
           <extension>war</extension>
           <targetFileName>demo.war</targetFileName>
         </org.jvnet.hudson.plugins.repositoryconnector.Artifact>
@@ -27,12 +32,12 @@
       <failOnError>true</failOnError>
       <enableRepoLogging>false</enableRepoLogging>
       <snapshotUpdatePolicy>always</snapshotUpdatePolicy>
-      <releaseUpdatePolicy>never</releaseUpdatePolicy>
+      <releaseUpdatePolicy>always</releaseUpdatePolicy>
       <snapshotChecksumPolicy>warn</snapshotChecksumPolicy>
       <releaseChecksumPolicy>warn</releaseChecksumPolicy>
     </org.jvnet.hudson.plugins.repositoryconnector.ArtifactResolver>
     <hudson.tasks.Shell>
-      <command>cp demo.war /home/sparsick/dev/apache-tomcat-8.5.4/webapps
+      <command>cp demo.war /home/sparsick/dev/apache-tomcat-9.0.4/webapps
 </command>
     </hudson.tasks.Shell>
   </builders>

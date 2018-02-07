@@ -1,15 +1,25 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<flow-definition plugin="workflow-job@2.3">
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.17">
   <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.9">
-    <script>stage &apos;DB Migration&apos;
-build job: &apos;Database Migration&apos;, wait: false
-stage &apos;Webdeployment&apos;
-build job: &apos;Webapp Deployment&apos;</script>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.27">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.44">
+    <script>stage (&apos;DB Migration&apos;) {
+    build job: &apos;Database Migration&apos;
+}
+
+stage (&apos;Webdeployment&apos;) {
+    build job: &apos;Webapp Deployment&apos;    
+}
+</script>
     <sandbox>true</sandbox>
   </definition>
   <triggers/>
+  <disabled>false</disabled>
 </flow-definition>
