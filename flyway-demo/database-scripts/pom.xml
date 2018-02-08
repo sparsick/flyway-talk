@@ -57,6 +57,7 @@
                     <user>flyway</user>
                     <password>flyway</password>
                     <url>jdbc:mysql://192.168.33.10:3306</url>
+                    <locations>classpath:</locations>
                 </configuration>
             </plugin>
 
