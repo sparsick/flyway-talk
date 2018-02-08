@@ -1,20 +1,25 @@
-flyway-talk-devops-meetup-dus-17
+flyway-talk-jugostfalen-meetup-bs-18
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration with Flyway" @ DevOps Meetupp in Düsseldorf (2017-07-12).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ JUG Ostfalen Meetup in Brunswick (2018-02-08).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
 - Jenkins  as CI server
-- Installed Jenkins Plugins: Repository Connector Plugin
-- Flyway in version 4.0.3
+- Used Jenkins Plugins:
+  - Repository Connector Plugin
+  - File System SCM Plugin
+- Flyway 5.0.7
 - Maven as Build Tool
 - MySQL
 
-flyway-4.0.3
+For the case,  you don't want to use your own database, I prepare a VM with MySQL (_Vagrantfile_). The VM is started by the command _vagrant up_. It requires an installed VirtualBox and Vagrant.
+
+flyway-5.0.7
 ----------------------------
 
-The subfolder _flyway-4.0.3_ contains a pre-configured Flyway commandline tool. If you want to use it against your own MySQL database, you have to change the url, user and password configuration in 'flyway-4.0.3/conf/flyway.properties'.
+The subfolder _flyway-5.0.7_ contains a pre-configured Flyway commandline tool. If you want to use it against your own MySQL database, you have to change the url, user and password configuration in 'flyway-5.0.7/conf/flyway.properties'.
+TODO: Vagrant File
 
 
 flyway-demo
