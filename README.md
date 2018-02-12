@@ -19,7 +19,6 @@ flyway-5.0.7
 ----------------------------
 
 The subfolder _flyway-5.0.7_ contains a pre-configured Flyway commandline tool. If you want to use it against your own MySQL database, you have to change the url, user and password configuration in 'flyway-5.0.7/conf/flyway.properties'.
-TODO: Vagrant File
 
 
 flyway-demo
