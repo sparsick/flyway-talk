@@ -21,6 +21,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <!-- <scope>provided</scope>  Bug in Flyway 5.0.7. It will be fixed in 5.1.0-->
         </dependency>
         <dependency>
             <groupId>junit</groupId>
