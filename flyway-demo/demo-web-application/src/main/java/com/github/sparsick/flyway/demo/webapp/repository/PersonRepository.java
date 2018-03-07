@@ -20,7 +20,6 @@ public class PersonRepository {
 
     @Autowired(required = true)
     public PersonRepository(DataSource dataSource) {
-        checkJdbcDriver();
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
@@ -53,13 +52,5 @@ public class PersonRepository {
         
         jdbcTemplate.update("Insert into person (first_name,last_name,job_title) values(?,?,?)", person.getFirstName(),
                 person.getLastName(), person.getJobTitle());
-    }
-
-    private void checkJdbcDriver() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException ex) {
-            throw new RuntimeException("Cannot load JDBC driver", ex);
-        }
     }
 }
