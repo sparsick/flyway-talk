@@ -1,7 +1,7 @@
 flyway-talk-jugostfalen-meetup-bs-18
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ JUG Ostfalen Meetup in Brunswick (2018-02-08).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ MD Dev Days in Magdeburg (2018-04-11).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
