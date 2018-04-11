@@ -1,4 +1,4 @@
-flyway-talk-jugostfalen-meetup-bs-18
+flyway-talk-mddevdays-18
 =================
 
 This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ MD Dev Days in Magdeburg (2018-04-11).
