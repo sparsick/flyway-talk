@@ -1,7 +1,7 @@
-flyway-talk-mddevdays-18
+flyway-talk-jax-18
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ MD Dev Days in Magdeburg (2018-04-11).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ JAX in Mainz (2018-04-26).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
@@ -19,8 +19,6 @@ flyway-5.0.7
 ----------------------------
 
 The subfolder _flyway-5.0.7_ contains a pre-configured Flyway commandline tool. If you want to use it against your own MySQL database, you have to change the url, user and password configuration in 'flyway-5.0.7/conf/flyway.properties'.
-TODO: Vagrant File
-
 
 flyway-demo
 --------------------
