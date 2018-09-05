@@ -1,7 +1,7 @@
 flyway-talk-jax-18
 =================
 
-This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ JAX in Mainz (2018-04-26).
+This repository contains slides, source code examples and Jenkins job configuration for the talk "Continuous Database Integration mit Flyway" @ Herbstcampus in Nuremberg (2018-09-05).
 
 Following tools were used in the demonstration:
 - Sonatype Nexus as Maven repository manager
