@@ -1,3 +1,5 @@
+⚠️ **This repository is moved to https://codeberg.org/sparsick/flyway-talk** ⚠️
+
 flyway-talk-jug-nuremberg-18
 =================
 
